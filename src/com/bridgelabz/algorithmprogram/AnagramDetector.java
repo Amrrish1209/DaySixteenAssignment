@@ -22,8 +22,8 @@ public class AnagramDetector {
 	}
 
 	public static void main(String[] args) {
-		String str1 = "abcd";
-		String str2 = "dcba";
+		String str1 = "heart";
+		String str2 = "earth";
 
 		if (areAnagrams(str1, str2)) {
 			System.out.println("The two strings are anagrams.");
