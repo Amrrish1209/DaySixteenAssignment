@@ -1,14 +1,14 @@
 package com.bridgelabz.datastructure;
 
-public class PrimeNumberTwoDArray {
+public class PrimeNumberTwoDArray<T extends Number> {
 
 	public static void main(String[] args) {
 		int range = 1000;
-		int[][] primeArray = new int[range / 100][25];
+		Number[][] primeArray = new Number[range / 100][25];
 		int index = 0;
 
 		for (int i = 0; i < range; i += 100) {
-			int[] primes = new int[25];
+			Number[] primes = new Number[25];
 			int count = 0;
 			for (int j = i; j < i + 100; j++) {
 				if (isPrime(j)) {
@@ -23,7 +23,7 @@ public class PrimeNumberTwoDArray {
 		for (int i = 0; i < primeArray.length; i++) {
 			System.out.print("Range " + i + " primes: ");
 			for (int j = 0; j < primeArray[i].length; j++) {
-				if (primeArray[i][j] != 0) {
+				if (primeArray[i][j] != null) {
 					System.out.print(primeArray[i][j] + " ");
 				}
 			}
